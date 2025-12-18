@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="description" content="Fashion Hub offers stylish clothing, shoes, and accessories at affordable prices. Shop the latest trends, discover new arrivals, and enjoy fast delivery. Your No.1 destination for quality fashion in Nigeria.">
+     <meta name="keywords" content="Fashion Hub, online fashion store, Nigerian fashion, clothing store Nigeria, affordable fashion, trendy outfits, men fashion, women fashion, unisex wear, shoes, bags, accessories, online shopping Nigeria">
+     <meta name="author" content="Fashion Hub">
+    <link rel="canonical" href="https://yourdomain.com/">
+    <link rel="Icon" href="image/logo.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer></script>
+    <title>Fashion Hub | Your No.1 Online Clothing Store in Nigeria</title>
+</head>
+<body>
+<header class="header">
+  <div class="container header__container">
+    <a href="index.html" class="header__logo">
+        <img src="image/faygee-logo.jpg" alt="Header Logo" class="header__logo"/>
+    </a>
+      <div class="header__overlay  "></div>
+    <nav class="header__nav  header-open">
+     <ul class="header__links">
+  <li><a href="index.html" class="header__link">Home</a></li>
+
+  <!-- DROPDOWN START -->
+  <li class="header__dropdown">
+    <a href="shop.html" class="header__link">Shop</a>
+
+   <ul class="header__dropdown-menu">
+      <li><a href="shop.html" class="header__dropdown-link">Shop all</a></li>
+      <li><a href="shop.html?category=women" class="header__dropdown-link">Women’s Wear</a></li>
+      <li><a href="shop.html?category=men" class="header__dropdown-link">Men’s Wear</a></li>
+      <li><a href="shop.html?category=unisex" class="header__dropdown-link">Unisex</a></li>
+      <li><a href="shop.html?category=accessories" class="header__dropdown-link">Accessories</a></li>
+      <li><a href="shop.html?category=new" class="header__dropdown-link">New Arrivals</a></li>
+      <li><a href="shop.html?category=wigs" class="header__dropdown-link">Wigs</a></li>
+    </ul>
+  </li>
+  <!-- DROPDOWN END -->
+  <li><a href="tailoring.html" class="header__link">Bespoke Tailoring</a></li>
+  <li><a href="#" class="header__link">About Us</a></li>
+  <li><a href="#" class="header__link">Contact</a></li>
+</ul>
+    </nav>
+
+    <nav class="nav-social-icons">
+        <ul class="nav-social-icons__list">
+            <!-- search icon -->
+            <li class="nav-social-icons__list-item" id="icon-search" title="Account" style="position:relative;"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="nav-social-icons__icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+</svg>
+</li>
+               <!-- account icon -->
+             <!-- <li class="nav-social-icons__list-item" id="icon-account" title="Account" style="position:relative;"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="nav-social-icons__icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+</svg>
+</li> -->
+    
+     <!-- wishlist icon -->
+              <li class="nav-social-icons__list-item" id="icon-wishlist" title="Wishlist" style="position:relative;">
+                  <span class="icon-count" id="wishlist-count" aria-hidden="true" style="display:none">0</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="nav-social-icons__icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+</svg>
+</li>
+                 <!--cart icon -->
+               <li class="nav-social-icons__list-item" id="icon-cart" title="Cart" style="position:relative;">
+                <span class="icon-count" id="cart-count" aria-hidden="true" style="display:none">0</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="nav-social-icons__icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+</svg>
+</li>
+        </ul>
+      </nav>
+
+  <button class="header__hamburger" id="openMobileNav">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+  </div>
+</header>
+
+<!-- MOBILE NAV OVERLAY -->
+<div class="mobile-nav-overlay" id="mobileNav">
+  <div class="mobile-nav__header">
+    <span class="mobile-nav__logo" style="font-family: var(--font-heading);">Faygee Fashion</span>
+    <button class="mobile-nav__close" id="closeMobileNav">&times;</button>
+  </div>
+
+  <ul class="mobile-nav__links">
+    <li><a href="index.html" class="mobile-nav__link">Home</a></li>
+
+    <!-- Accordion START -->
+    <li class="mobile-nav__accordion">
+      <button class="mobile-nav__accordion-btn">
+        Shop <span class="arrow">+</span>
+      </button>
+      <ul class="mobile-nav__accordion-menu">
+        <li><a href="shop.html" class="mobile-nav__sublink">Shop all</a></li>
+        <li><a href="shop.html?category=men" class="mobile-nav__sublink">Men’s Wear</a></li>
+        <li><a href="shop.html?category=women" class="mobile-nav__sublink">Women’s Wear</a></li>
+        <li><a href="shop.html?category=unisex" class="mobile-nav__sublink">Unisex</a></li>
+        <li><a href="shop.html?category=accessories" class="mobile-nav__sublink">Accessories</a></li>
+        <li><a href="shop.html?category=new" class="mobile-nav__sublink">New Arrivals</a></li>
+        <li><a href="shop.html?category=wigs" class="mobile-nav__sublink">Wigs</a></li>
+      </ul>
+    </li>
+    <!-- Accordion END -->
+
+    <li><a href="tailoring.html" class="mobile-nav__link">Bespoke Tailoring</a></li>
+    <li><a href="#" class="mobile-nav__link">About Us</a></li>
+    <li><a href="#" class="mobile-nav__link">Contact</a></li>
+  </ul>
+
+  <!-- MOBILE ICONS -->
+  <div class="mobile-nav__icons">
+     <!-- search icon -->
+            <li class="nav-social-icons__list-item" id="icon-search">
+                <span class="icon-count" id="cart-count" style="position: relative; opacity: 0; pointer-events: none;">0</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="nav-social-icons__icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+</svg>
+</li>
+               <!-- account icon -->
+             <!-- <li class="nav-social-icons__list-item" id="icon-account">
+               <span class="icon-count" id="cart-count" style="position: relative; opacity: 0; pointer-events: none;">0</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="nav-social-icons__icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+</svg>
+</li> -->
+                 <!-- wishlist icon -->
+              <li class="nav-social-icons__list-item" id="icon-wishlist">
+                  <span class="icon-count" id="wishlist-count" style="position: relative;">0</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="nav-social-icons__icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+</svg>
+</li>
+                 <!--cart icon -->
+               <li class="nav-social-icons__list-item" id="icon-cart">
+                 <span class="icon-count" id="cart-count" style="position: relative;">0</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="nav-social-icons__icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+</svg>
+</li>
+  </div>
+</div>
+
+
+<!-- Hero Section -->
+    <section class="section-hero" aria-label="Faygee hero section" id="hero">
+        <div class="hero">
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content" id="heroContent">
+        <h1 id="heroTitle" class="heading-1">&nbsp;</h1>
+        <p id="heroSubtitle" class="hero__text">&nbsp;</p>
+
+        <div class="hero__buttons" id="heroButtons">
+            <a href="#" class="btn-primary" id="btn1">Shop Latest Arrivals</a>
+            <a href="#" class="btn-secondary" id="btn2">Explore Collections →</a>
+        </div>
+    </div>
+</div>
+    </section>
+    <!-- Categories section -->
+     <section class="section-categories" aria-label="faygee categories section" id="categories">
+      <div class="section-categories__text">
+        <h2 class="heading-2">Explore Our Collections</h2>
+      </div>
+      <div class="Categories container">
+         <div class="categories__grid">
+           <figure class="categories__grid-figure">
+    <img src="image/model-1.jpg" alt="featured image 1" class="categories__grid-image">
+
+    <div class="categories__grid-contents">
+        <p class="categories__grid-title">Men’s Wear</p>
+        <p class="categories__grid-subtitle">Premium outfits for everyday elegance.</p>
+        <a href="#" class="categories__grid-btn btn-primary">Shop Now</a>
+    </div>
+</figure>
+
+             <figure class="categories__grid-figure">
+    <img src="image/model.jpg" alt="featured image 1" class="categories__grid-image">
+
+    <div class="categories__grid-contents">
+        <p class="categories__grid-title">Women’s Wear</p>
+        <p class="categories__grid-subtitle">Elegant styles for every occasion.</p>
+        <a href="#" class="categories__grid-btn btn-primary">Shop Now</a>
+    </div>
+</figure>
+
+   <figure class="categories__grid-figure categories__grid-row3">
+    <img src="image/unisex.jpg" alt="featured image 1" class="categories__grid-image">
+
+    <div class="categories__grid-contents">
+        <p class="categories__grid-title">Unisex</p>
+        <p class="categories__grid-subtitle">Versatile fashion for everyone</p>
+        <a href="#" class="categories__grid-btn btn-primary">Shop Now</a>
+    </div>
+</figure>
+         <!-- </div> -->
+          <!-- Divider -->
+         <!-- <div class="categories__grid secondary"> -->
+                <figure class="categories__grid-figure">
+    <img src="image/bags.jpg" alt="featured image 1" class="categories__grid-image">
+
+    <div class="categories__grid-contents">
+        <p class="categories__grid-title">Accessories</p>
+        <p class="categories__grid-subtitle">Complete your look with the perfect details.</p>
+        <a href="#" class="categories__grid-btn btn-primary">Shop Now</a>
+    </div>
+</figure>
+             <figure class="categories__grid-figure">
+    <img src="image/store.jpg" alt="featured image 1" class="categories__grid-image">
+
+    <div class="categories__grid-contents">
+        <p class="categories__grid-title">New Arrivals</p>
+        <p class="categories__grid-subtitle">Fresh drops you’ll love</p>
+        <a href="#" class="categories__grid-btn btn-primary">Shop Now</a>
+    </div>
+</figure>
+            <figure class="categories__grid-figure  categories__grid-row6">
+    <img src="image/wig-2.jpg" alt="featured image 1" class="categories__grid-image">
+
+    <div class="categories__grid-contents">
+        <p class="categories__grid-title">Wigs</p>
+        <p class="categories__grid-subtitle">Premium styles for bold expression.</p>
+        <a href="#" class="categories__grid-btn btn-primary">Shop Now</a>
+    </div>
+</figure>
+        <!-- </div> -->
+
+      </div>
+     </section>
+     <!-- FEATURED PRODUCTS   -->
+      <section class="featured-products container" aria-label="faygee featured-products" id="featured-products">
+      <h2 class="heading-2">Featured Products</h2>
+       <div class="products-grid" id="featuredContainer"></div>
+     </section>
+
+     <!-- BANNER SECTION -->
+      <section class="section-banner">
+        <div class="banner container">
+          <div class="banner__content">
+            <h2 class="heading-2 banner__heading">Elevate Your Wardrobe with Timeless Luxury</h2>
+            <p class="banner__text">A refined collection of premium fashion — crafted with precision, sophistication, and enduring elegance.</p>
+               <a href="#" class=" btn-primary" style="display: grid; justify-self: center;">Shop Collection → </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS SECTION -->
+
+  <section class="section-testimonials" id="testimonials" aria-label="faygee testimonials" id="testimonials">
+  <div class="container">
+    <h2 class="testimonials__title heading-2">What Our Customers Say</h2>
+    <p class="testimonials__subtitle">
+      Real experiences from clients who trust our quality and craftsmanship.
+    </p>
+
+    <div class="testimonials__slider">
+      <button class="slide-btn prev">&larr;</button>
+
+      <div class="testimonials__track" id="testimonialTrack">
+
+        <!-- Testimonial 1 -->
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial__text">
+            “The quality is outstanding — soft, luxurious, and beautifully tailored.
+            I instantly felt elevated wearing this.”
+          </p>
+          <p class="testimonial__name">— Amara O.</p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial__text">
+            “My suit arrived perfectly fitted and far more premium than expected.
+            This brand understands modern elegance.”
+          </p>
+          <p class="testimonial__name">— Kelvin M.</p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial">
+          <div class="stars">★★★★</div>
+          <p class="testimonial__text">
+            “I’ve bought three pieces so far, and each one feels exclusive.
+            The craftsmanship is truly next-level.”
+          </p>
+          <p class="testimonial__name">— Damilola A.</p>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial__text">
+            “The wig I ordered looks incredibly natural. It boosted my confidence instantly —
+            absolutely worth it.”
+          </p>
+          <p class="testimonial__name">— Chidera N.</p>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div class="testimonial">
+          <div class="stars">★★★★</div>
+          <p class="testimonial__text">
+            “Fast delivery, luxurious feel, and the styles look even better in person.
+            This is my new go-to fashion store.”
+          </p>
+          <p class="testimonial__name">— Stephanie U.</p>
+        </div>
+
+      </div>
+      <button class="slide-btn next">&rarr;</button>
+    </div>
+  </div>
+</section>
+<!-- NEWSLETTER-->
+ <section class="section-newsletter" aria-label="faygee newsletter" id="newsletter">
+  <h2 class="heading-2">Join Our Exclusive List</h2>
+   <div class="newsletter container">
+    <p class="newsletter__text">Be the first to access new drops, private sales & exclusive releases.</p>
+      <form class="newsletter__form">
+        <input  id="email" type="email" name="email" placeholder="email" required />
+        <button type="submit" class="btn-primary" style="border: none; box-shadow: 0px 6px 5px black; padding: 1.2rem 5rem; font-size: 1.8rem; font-family: var(--font-body);">Submit</button>
+      </form>
+   </div>
+ </section>
+ 
+ <!-- Footer -->
+  <section class="section-footer" aria-label="faygee footer" id="footer">
+    <div class="footer container">
+      <div class="footer__top">
+        <div class="footer__top-1">
+          <a href="index.html" class="footer__logo">
+          <img src="image/faygee-logo.jpg" alt="Header Logo" class="footer__logo"/>
+           </a>
+           <p class="footer__text">Faygee fashion.</br>
+            Crafted for the modern lifestyle.</p>
+        </div>
+        
+          <div class="footer__top-3">
+          <h3 class="footer__heading">Follow Us</h3>
+           <div class="footer__social-icons">
+            <a href="#"><ion-icon name="logo-instagram" class="footer__icon"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-tiktok" class="footer__icon"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter" class="footer__icon"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-facebook" class="footer__icon"></ion-icon></a>
+           </div>
+          </div>
+      </div>
+       <!-- Copyright line -->
+     <div class="footer__copyright">
+       <p class="footer__copyright-text"><span class="year">&copy; 2024</span> Faygee Fashion. All Rights Reserved.</p>
+     </div>
+    </div>
+    
+  </section>
+
+  <div id="siteOverlay" class="panel-overlay" aria-hidden="true"></div>
+
+  <!-- ONE SINGLE CART PANEL FOR BOTH DESKTOP & MOBILE -->
+<aside id="cartPanel" class="slide-panel" aria-hidden="true">
+  <header class="panel-header">
+    <h3>Your Cart</h3>
+    <button data-close class="panel-close" aria-label="Close cart">×</button>
+  </header>
+
+  <div id="cartPanelBody" class="panel-body"></div>
+
+  <footer class="panel-footer">
+    <div id="cartSummary" class="panel-summary"></div>
+    <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+  </footer>
+</aside>
+
+<!-- ONE SINGLE WISHLIST PANEL FOR BOTH DESKTOP & MOBILE -->
+<aside id="wishlistPanel" class="slide-panel" aria-hidden="true">
+  <header class="panel-header">
+    <h3>Your Wishlist</h3>
+    <button data-close class="panel-close" aria-label="Close wishlist">×</button>
+  </header>
+
+  <div id="wishlistPanelBody" class="panel-body"></div>
+</aside>
+
+</body>
+</html>

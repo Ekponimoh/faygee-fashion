@@ -1,0 +1,178 @@
+/*************Animations styles*******/
+ @keyframes bgAnimation {
+
+    from{
+        background-image: linear-gradient(rgba(0,0,0, 0.9), rgba(0,0,0, 0.9)),
+        url(../image/bag.jpg);
+        background-position: center top;
+        background-position: center bottom;
+        background-position: center top;
+
+    }
+
+     50%{
+        background-image: linear-gradient(rgba(0,0,0, 0.9), rgba(0,0,0, 0.9)),
+        url(../image/man-suit.jpg);
+
+    }
+
+    80%{
+        background-image: linear-gradient(rgba(0,0,0, 0.9), rgba(0,0,0, 0.9)),
+        url(../image/model-1.jpg);
+
+    }
+
+    to{
+        background-image: linear-gradient(rgba(0,0,0, 0.9), rgba(0,0,0, 0.9)),
+        url(../image/model-2.jpg);
+    }
+ }
+
+
+   /* Fade-in Sequence */
+  .slide-text {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideIn 1s ease forwards ;
+  
+    &.delay-1 {
+      animation-delay: 0.8s;
+    }
+  
+    &.delay-2 {
+      animation-delay: 1.6s;
+    }
+  
+    &.delay-3 {
+      animation-delay: .3s;
+    }
+  }
+  
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .fade-text {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp  1s ease forwards ;
+  
+    &.delay-1 {
+      animation-delay: 0.8s;
+    }
+  
+    &.delay-2 {
+      animation-delay: 1.6s;
+    }
+  
+    &.delay-3 {
+      animation-delay: .3s;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Float  icons*/
+  
+  @keyframes float {
+     0%{
+          transform: translateY(0px);
+      }
+      50%{
+          transform: translateY(-8px);
+     }
+  
+     100%{
+          transform: translateY(0px);
+     }
+    }
+  
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.fade-blur {
+  opacity: 0;
+  filter: blur(6px);
+  transition: opacity 1s ease, filter 1s ease;
+
+  &.visible {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+
+.rise {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.stagger {
+  > * {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  &.visible > * {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &.visible > *:nth-child(1) { transition-delay: 0.1s; }
+  &.visible > *:nth-child(2) { transition-delay: 0.25s; }
+  &.visible > *:nth-child(3) { transition-delay: 0.4s; }
+  &.visible > *:nth-child(4) { transition-delay: 0.55s; }
+  &.visible > *:nth-child(5) { transition-delay: 0.7s; }
+  &.visible > *:nth-child(6) { transition-delay: 0.85s; }
+  &.visible > *:nth-child(7) { transition-delay: 1s; }
+}

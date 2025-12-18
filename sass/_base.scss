@@ -1,0 +1,149 @@
+:root {
+   /*************BASE COLORS********************/
+    --primary-bg:#0a1a3a; /* FOR BACKGROUNDS*/
+    --secondary-bg:#f8f9fb; /*TEXT BACKGROUNDS*/
+    --color-white:#fff;
+ 
+  /*************TEXT COLORS********************/
+  --text:#555555; /*PRIMARY TEXT COLOR*/
+  --highlight:#f8fafc; /*FOR HOVER, ICONS AND HIGHLIGHT*/
+  --accent: #D4AF37; /*BUTTONS/HIGHLIGHT*/
+
+ /*************BOX SHADOWS********************/
+  --shadow-1: 0 4px 12px #0000001a;
+  --shadow-2: 0 8px 20px rgba(0, 0, 0, 0.08);
+  --shadow-3: 0 4px 12px rgba(200, 200, 200, 0.3);
+   --shadow-4:rgba(0,0,0, 0.05);
+
+  /*************FONTS********************/
+  --font-heading: "Playfair Display", sans-serif;
+  --font-body: "montserrat", sans-serif;
+  --font-bold: 600;
+
+  --header-offset: 0px; /* set in your global CSS to header height like "70px" */
+  --sidebar-width: 260px;
+   --navy: #0b2540;
+  --accent: #c5212d;
+  --accent-dark: #98171f;
+  --muted: #f4f6f9;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  transition: padding-right 0.25s ease;
+
+  @media only screen and (max-width: 75em) {
+    font-size: 56.25%;
+  }
+
+  @media only screen and (max-width: 50em) {
+    font-size: 50%;
+  }
+}
+
+body {
+  position: relative;
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: var(--text);
+  overflow-x: hidden;
+  background-color: var(--bg-color);
+}
+
+
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+  
+.btn{
+  &:link,
+  &:visited,
+  &:active{
+  text-transform: capitalize;
+  border: none;
+  font-family: var(--font-body);
+   font-size: clamp(1.6rem, 1.3vw, 1.2rem);
+  padding: 1.4rem 3rem;
+  border-radius: 9px; 
+  font-weight: 600;
+   text-decoration: none;
+  transition: all .3s ease;
+   background-color: var(--primary-bg);
+   color: var(--secondary);
+  display: grid;
+  justify-self: center;
+  text-align: center;
+   box-shadow: 0 10px 12px rgba(0, 0, 0, 0.9);
+      
+     &:hover{
+    color: #1e2a38!important;
+    background-color: white!important;
+     transform: translateY(4px); 
+   
+     
+  }
+  }
+}
+
+/* Container fix */
+.mobile-nav__icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 18px 0;
+}
+
+/* Make all icons white */
+.mobile-nav__icons svg {
+    color: #fff !important;
+    stroke: #fff !important;
+    width: 24px;
+    height: 24px;
+}
+
+/* Badge (count bubble) */
+.mobile-nav__icons .icon-count {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    background: #c21e2b;
+    color: #fff;
+    font-size: 11px;
+    min-width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    font-weight: 600;
+    z-index: 5;
+
+    @media only screen and (max-width: 62.25em) {
+       top: 6px;
+       right: -10px;
+       padding: 1rem;
+       width: 3rem;
+       height: 3rem;
+       line-height: 0;
+    }
+}
+
+/* Show the badge when count > 0 */
+.icon-count:not([style*="display:none"]) {
+    display: flex !important;
+}
+
